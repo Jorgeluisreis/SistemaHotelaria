@@ -1,0 +1,67 @@
+# Arquivos de Bytecode
+bin/
+obj/
+
+# Arquivos de configuração do usuário
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Arquivos de Build MonoDevelop
+*.pidb
+*.dbmdl
+
+# Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+
+# Arquivos de configuração do IDE do Visual Studio Code
+.vscode/
+
+# Pasta .vs, onde o Visual Studio salva arquivos de configuração locais
+.vs/
+
+# Pasta de pacotes NuGet
+packages/
+
+# Arquivos de Build MSBuild
+*.log
+*.sqlproj.user
+*.cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+~$*
+
+# Arquivos de Projeto Rider
+.idea/
+
+# Pasta de saída da publicação
+publish/
+
+# Pasta de logs de compilação
+logs/
+
+# Nodemon
+nodemon.json
+
+# OSX directory attributes
+.DS_Store
+
+# Arquivos temporários do Windows
+[Tt]humbs.db
+ehthumbs.db
+Desktop.ini
+
+# Pasta de artefatos
+artifacts/
+
+# Arquivos de banco de dados SQL Server
+*.mdf
+*.ldf
+*.ndf
+
+# Arquivos de configuração de cobertura de código
+*.coverage
+*.coveragexml
