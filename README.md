@@ -12,9 +12,25 @@ O SistemaHotelaria é uma aplicação de console C# que simula a gestão de um h
  <p align="center">
   <img src="https://github.com/Jorgeluisreis/SistemaHotelaria/assets/81347105/d5ce586f-2cfb-4020-b866-feb1e81aaf01" alt="Gerenciamento de Hospedes">
 </p>
+
 - **Gerenciamento de Suítes**: Facilita o cadastro e a visualização das suítes disponíveis.
+  <p align="center">
+  <img src="https://github.com/Jorgeluisreis/SistemaHotelaria/assets/81347105/29df5de0-cd57-4850-b8e3-e6e621058aab" alt="Gerenciamento de Suítes">
+</p>
+
 - **Reservas**: Permite realizar e gerenciar reservas, além de disponibilizar a consulta das reservas ativas.
+  <p align="center">
+  <img src="https://github.com/Jorgeluisreis/SistemaHotelaria/assets/81347105/a0dd29db-4218-49fd-a370-eb752aa11343" alt="Menu de Reservas">
+</p>
+<p align="center">
+  <img src="https://github.com/Jorgeluisreis/SistemaHotelaria/assets/81347105/e75e4cb4-8d97-446b-952a-f0d8ce996d57" alt="Lista de Reservas Cadastradas">
+</p>
+
 - **Controle de Ocupação**: Oferece uma visão geral da ocupação das suítes, com a possibilidade de encerrar reservas e liberar suítes para novos hóspedes.
+  <p align="center">
+  <img src="https://github.com/Jorgeluisreis/SistemaHotelaria/assets/81347105/5a8301d6-a748-4d83-b88b-bb1711d88f15" alt="Visão das Suítes">
+</p>
+
 
 ### Tecnologias Utilizadas
 
