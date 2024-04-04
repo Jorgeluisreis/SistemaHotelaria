@@ -158,6 +158,7 @@ namespace SistemaHotelaria.Models
 
 
                     // Determinar a quantidade de dias para a reserva
+                    Console.Clear();
                     int diasReservados = int.Parse(ConsoleUI.PromptWithLineFull("Por quantos dias a suíte será reservada?"));
 
                     // Criar e adicionar a reserva
