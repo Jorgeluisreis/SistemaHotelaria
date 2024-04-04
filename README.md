@@ -32,7 +32,7 @@ Contribuições são sempre bem-vindas! Se você tem alguma sugestão para melho
 
 ## Licença
 
-Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+Este projeto é licenciado sob a MIT License - veja o arquivo [LICENSE.md](https://github.com/Jorgeluisreis/SistemaHotelaria/blob/main/LICENSE) para detalhes.
 
 ---
 
