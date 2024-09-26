@@ -8,8 +8,8 @@ namespace SistemaHotelaria
         public static void ExibirMenu()
         {
             Console.Clear();
-            Console.SetWindowSize(80, 30); // Defina um tamanho de início razoável
-            Console.SetBufferSize(80, 30); // Impede o scroll vertical e horizontal
+            Console.SetWindowSize(80, 30);
+            Console.SetBufferSize(80, 30);
             ConsoleManager.DisableResize();
             int respMenu = 0;
             bool ativo = true;

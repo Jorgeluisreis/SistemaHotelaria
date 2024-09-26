@@ -14,10 +14,9 @@ public static class CadastrarSuite
             try
             {
 
-                TipoSuite tipo = TipoSuite.Simples; // Ou qualquer valor padrão válido
-                Capacidade capacidade = Capacidade.Solo; // Ou qualquer valor padrão válido
+                TipoSuite tipo = TipoSuite.Simples;
+                Capacidade capacidade = Capacidade.Solo;
 
-                // Pedir o tipo da suíte
                 bool tipoValido = false;
                 while (!tipoValido)
                 {
@@ -42,7 +41,6 @@ public static class CadastrarSuite
                 Console.Clear();
                 ConsoleUI.DisplayHeader("Cadastro de Suítes");
 
-                // Pedir a capacidade da suíte
                 bool capacidadeValida = false;
                 while (!capacidadeValida)
                 {
@@ -65,7 +63,6 @@ public static class CadastrarSuite
                 Console.Clear();
                 ConsoleUI.DisplayHeader("Cadastro de Suítes");
 
-                // Pedir o valor da diária
                 ConsoleUI.Text("Valor da Diária (R$)");
                 ConsoleUI.DrawResponsiveLine();
                 decimal valorDiaria = decimal.Parse(Console.ReadLine());

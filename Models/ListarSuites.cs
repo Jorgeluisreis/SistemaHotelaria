@@ -22,7 +22,6 @@ namespace SistemaHotelaria.Models
                 string suiteDetails = $"Número: {suite.Id} - Tipo: {suite.Tipo} - Capacidade: {suite.Capacidade} - Valor Diária: R$ {suite.ValorDiaria:N2}, Ocupado: {status}";
                 ConsoleUI.FormatAndWriteLine(suiteDetails);
 
-                // Desenha a linha responsiva apenas entre as suítes
                 if (i < CadastrarSuite.Suites.Count - 1)
                 {
                     ConsoleUI.DrawResponsiveLine();

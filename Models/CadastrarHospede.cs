@@ -17,16 +17,14 @@ public static class GerenciadorHospedes
             Console.Clear();
             ConsoleUI.DisplayHeader(" Cadastro de Hóspedes ");
             nome = ConsoleUI.PromptWithLine("Digite o Nome:");
-            // Verificação para garantir que o nome não está vazio e não contém números
             while (string.IsNullOrWhiteSpace(nome) || nome.Any(char.IsDigit))
             {
                 Console.Clear();
                 ConsoleUI.DisplayHeader("Erro");
                 ConsoleUI.Text("Nome inválido, não deve conter números ou estar vazio.");
                 ConsoleUI.DrawResponsiveLine();
-                Console.ReadKey(); // Espera o usuário apertar uma tecla
+                Console.ReadKey();
 
-                // Reexibe a solicitação do nome após o usuário apertar uma tecla
                 Console.Clear();
                 ConsoleUI.DisplayHeader(" Cadastro de Hóspedes ");
                 nome = ConsoleUI.PromptWithLine("Digite o Nome:");
@@ -35,17 +33,16 @@ public static class GerenciadorHospedes
             Console.Clear();
             ConsoleUI.DisplayHeader(" Cadastro de Hóspedes ");
             sobrenome = ConsoleUI.PromptWithLine("Digite o Sobrenome:");
-            // Verificação similar para o sobrenome
+
             while (string.IsNullOrWhiteSpace(sobrenome) || sobrenome.Any(char.IsDigit))
             {
                 Console.Clear();
                 ConsoleUI.DisplayHeader("Erro");
                 ConsoleUI.Text("Sobrenome inválido, não deve conter números ou estar vazio.");
                 ConsoleUI.DrawResponsiveLine();
-                Console.ReadKey(); // Espera o usuário apertar uma tecla
+                Console.ReadKey(); 
 
 
-                // Reexibe a solicitação do sobrenome após o usuário apertar uma tecla
                 Console.Clear();
                 ConsoleUI.DisplayHeader(" Cadastro de Hóspedes ");
                 sobrenome = ConsoleUI.PromptWithLine("Digite o Sobrenome:");
@@ -76,7 +73,6 @@ public static class GerenciadorHospedes
             }
             else if (respMenu == 2)
             {
-                // Não é necessário alterar este bloco
                 continue;
             }
             else

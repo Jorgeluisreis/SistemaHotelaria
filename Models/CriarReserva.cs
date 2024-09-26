@@ -19,7 +19,6 @@ namespace SistemaHotelaria.Models
                     Console.Clear();
                     ConsoleUI.DisplayHeader("Realizar Reserva de Suíte");
 
-                    // Listar suítes disponíveis
                     var suitesDisponiveis = CadastrarSuite.Suites.Where(suite => !suite.Ocupado).ToList();
                     if (suitesDisponiveis.Count == 0)
                     {
@@ -66,8 +65,6 @@ namespace SistemaHotelaria.Models
                         }
                     }
 
-
-                    // Listar hóspedes
                     if (GerenciadorHospedes.Hospedes.Count == 0)
                     {
                         Console.Clear();
@@ -75,7 +72,7 @@ namespace SistemaHotelaria.Models
                         ConsoleUI.Text("Não há hóspedes cadastrados ou já estão hospedados.");
                         ConsoleUI.DisplayBorderedText("Pressione qualquer tecla para continuar...");
                         Console.ReadKey();
-                        return; // Encerra se não houver hóspedes
+                        return;
                     }
 
                     if (hospedesNaoHospedados.Count == 0)
@@ -85,14 +82,14 @@ namespace SistemaHotelaria.Models
                         ConsoleUI.Text("Não há hóspedes disponíveis para reserva.");
                         ConsoleUI.DisplayBorderedText("Pressione qualquer tecla para continuar...");
                         Console.ReadKey();
-                        return; // Retorna para o menu anterior ou encerra a execução do método
+                        return;
                     }
                     Console.Clear();
                     ConsoleUI.DisplayHeader("Criar Reserva");
                     ConsoleUI.Text("Selecione o(s) hóspede(s) para a reserva:");
                     ConsoleUI.DrawResponsiveLine();
                     var hospedesSelecionados = new List<Pessoa>();
-                    int maxHospedes = (int)suiteSelecionada.Capacidade + 1; // +1 pois enum começa de 0
+                    int maxHospedes = (int)suiteSelecionada.Capacidade + 1;
 
                     do
                     {
@@ -120,14 +117,14 @@ namespace SistemaHotelaria.Models
                                 ConsoleUI.Text("Por favor, insira um número válido.");
                                 ConsoleUI.DrawResponsiveLine();
                                 Console.ReadKey();
-                                continue; // Continua o loop pedindo um ID de hóspede novamente
+                                continue;
                             }
 
                             hospedeSelecionado = hospedesNaoHospedados.FirstOrDefault(h => h.Id == hospedeId);
                             if (hospedeSelecionado != null && !hospedesSelecionados.Contains(hospedeSelecionado))
                             {
                                 hospedesSelecionados.Add(hospedeSelecionado);
-                                hospedeValido = true; // Encerra o loop interno
+                                hospedeValido = true;
                                 Console.Clear();
                                 ConsoleUI.DisplayHeader("Criar Reserva");
                                 ConsoleUI.FormatAndWriteLine($"{hospedeSelecionado.Nome} {hospedeSelecionado.Sobrenome} adicionado à reserva.");
@@ -142,26 +139,22 @@ namespace SistemaHotelaria.Models
                             }
                         }
 
-                        // Verifica se o limite de hóspedes foi alcançado
                         if (hospedesSelecionados.Count >= maxHospedes) break;
 
-                        // Pergunta se deseja adicionar outro hóspede
                         ConsoleUI.DrawResponsiveLine();
                         int adicionarMais = int.TryParse(ConsoleUI.PromptWithLine("Deseja adicionar outro hóspede à reserva? 1 para sim, 2 para não:"), out int escolhaAdicionar) ? escolhaAdicionar : 0;
                         if (adicionarMais != 1)
                         {
-                            break; // Sai do loop se não deseja adicionar mais hóspedes
+                            break;
                         }
 
                     } while (hospedesSelecionados.Count < maxHospedes);
 
 
 
-                    // Determinar a quantidade de dias para a reserva
                     Console.Clear();
                     int diasReservados = int.Parse(ConsoleUI.PromptWithLineFull("Por quantos dias a suíte será reservada?"));
 
-                    // Criar e adicionar a reserva
                     var reserva = new Reserva
                     { Id = suiteSelecionada.Id,
                         Hospedes = hospedesSelecionados,
@@ -170,7 +163,6 @@ namespace SistemaHotelaria.Models
                     };
                     Reservas.Add(reserva);
 
-                    // Atualizar o status da suíte para ocupado
                     suiteSelecionada.Ocupado = true;
 
                     Console.Clear();
